@@ -42,8 +42,7 @@ searchBtn.on("click", function(){
     currentWindEl.text("Wind: " + cityData.wind.speed);
     currentBodyEl.append(currentWindEl);
 
-
-    
+});
 
     var cityEl = $('<p>');
     cityList.append(cityEl);
@@ -53,14 +52,15 @@ searchBtn.on("click", function(){
 
     localStorage.setItem("cityName", JSON.stringify(cityHistory));
 
-});
+
 })
    
 
 
 var addCitylist = function(){
+    if (localStorage.length > 0) {
     cityHistory = JSON.parse(localStorage.getItem("cityName")); 
-    if (cityHistory > 0) { 
+   
         for (x=0; x < 10; x++){
             var cityListEl = $('<li>');
             cityListEl.text(cityHistory[x]);
