@@ -61,7 +61,7 @@ var addCitylist = function(){
     if (localStorage.length > 0) {
     cityHistory = JSON.parse(localStorage.getItem("cityName")); 
    
-        for (x=0; x < 10; x++){
+        for (var x=0; x < 10; x++){
             var cityListEl = $('<li>');
             cityListEl.text(cityHistory[x]);
             prevCitylist.append(cityListEl); 
