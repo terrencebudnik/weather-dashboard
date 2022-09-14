@@ -60,7 +60,7 @@ searchBtn.on("click", function(){
 
 var addCitylist = function(){
     cityHistory = JSON.parse(localStorage.getItem("cityName")); 
-    if (cityHistory != 0) { 
+    if (cityHistory > 0) { 
         for (x=0; x < 10; x++){
             var cityListEl = $('<li>');
             cityListEl.text(cityHistory[x]);
